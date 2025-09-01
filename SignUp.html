@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>sign up</title> 
+  <style>
+       /*---------- GLOBAL STYLES ----------*/
+       body{
+        margin: 0;
+        padding: 0.5rem;
+        background: linear-gradient(135deg, #006cff, #428fee);
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+        /*---------- SIGN UP BOX STYLES ----------*/
+       .sign-up-box{
+            border: solid 1px rgb(255, 255, 255, 0.3);
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 4%;
+            padding-left: 2%;
+            padding-right: 2%;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 480px;
+            height: auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+            transition: 0.3s ease-in-out;
+       }
+       .sign-up-box:hover{
+        transform: translateY(-10px);
+       }
+
+        /* ---------- TITLE STYLES---------- */ 
+       .sign-up-box h1{
+         margin-bottom: 2.5rem;
+         text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+         color: blue;
+       }
+
+       /* ---------- INPUT FIELDS STYLES---------- */
+       .sign-up-box input{
+         width: 90%;
+         color: white;
+         font-size: 14px;
+         padding: 0.8rem;
+         background: rgba(255, 255, 255, 0.2);
+         margin-bottom: 1rem;
+         border-radius: 8px;
+         outline: none;
+         border: none;
+         transition: 0.3s;
+       }
+       .sign-up-box input::placeholder{
+        color: #eee;
+       }
+       .sign-up-box input:focus{
+        box-shadow: 0 0 20px #fff;
+       }
+
+        /* ---------- BUTTON STYLES ---------- */
+       .btn button{
+         width: 95%;
+         font-size: 14px;
+         padding: 0.7rem;
+         margin-bottom: 2rem;
+         border: solid 1px black;
+         background: transparent;
+         border-radius: 8px;
+         cursor: pointer;
+         transition: 0.3s; 
+       }
+       .btn button:hover{
+        transform: scale(1.05);
+        background: linear-gradient(135deg, blue, purple);
+        color: white;
+        border-color: blue;
+        box-shadow: 0 0 10px blue;
+       }
+
+        /* ---------- LINK STYLES ---------- */
+       .sign-up-box a{
+        color: white;
+        transition: 0.3s;
+       }
+       .sign-up-box a:hover{
+        color: blue;
+        text-decoration: none;
+       }
+
+        /* ---------- MEDIA QUERIES ---------- */
+       @media(max-width: 600px) and (orientation: landscape){
+          body{
+            padding-top: 1rem;
+            align-items: flex-start;
+          }
+          .sign-up-box{
+            margin-top: 0.5rem;
+          }  
+       }
+    </style> 
+ </head> 
+ <body> 
+
+  <!---------- SIGN UP BOX ---------->
+  <div class="sign-up-box"> 
+   <h1>Signing In</h1> 
+   <form> 
+
+    <!---------- INPUT FIELDS ---------->
+    <input type="text" placeholder="Full Name" required> 
+    <input type="text" placeholder="Username" required> 
+    <input type="password" placeholder="Create Password" required> 
+    <input type="password" placeholder="Confirm Password" required> 
+    
+    <!---------- SIGN IN BUTTON ---------->
+    <div class="btn"> 
+      <button type="submit">Sign In</button> 
+    </div> 
+
+    <!---------- LOGIN LINK ---------->
+    <a href="loginPage.html">Already have an Account? Login</a> 
+   </form> 
+  </div> 
+ </body>
+</html>

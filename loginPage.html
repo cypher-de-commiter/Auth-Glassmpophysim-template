@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title> 
+  <style>
+    /*---------- GLOBAL STYLES ----------*/
+        body{
+            margin: 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, #006cff, #0072ff);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*---------- LOGIN BOX STYLES ----------*/
+        .login-box{
+            border: solid 1px rgb(255, 255, 255, 0.3);
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 4%;
+            padding-right: 2%;
+            padding-left: 2%;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+            transition: 0.3s ease-in-out;
+        }
+        .login-box:hover{
+            transform: translateY(-10px);
+        }
+
+        /* ---------- INPUT FIELDS STYLES---------- */
+        .login-box input{
+            width: 90%;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.8rem;
+            font-size: 14px;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            transition: 0.3s;
+        }
+        .login-box input::placeholder{
+            color: #eee;
+        }
+        .login-box input:focus{
+            border-color: #2575fc;
+            box-shadow: 0 0 20px #fff;
+        }
+
+        /* ---------- TITLE STYLES---------- */
+        .login-box h1{
+            margin-bottom: 10%;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+            color: blue;
+        }
+
+        /* ---------- LINK STYLES---------- */
+        .login-box a{
+            color: white;
+            transition: 0.3s;
+        }
+        .login-box a:hover{
+            color: blue;
+            text-decoration: none;
+        }
+
+        /* ---------- BUTTON STYLES---------- */
+        .btn button{
+            margin-bottom: 1rem;
+            width: 95%;
+            font-size: 14px;
+            background: transparent;
+            border-radius: 10px;
+            border: solid 1px;
+            padding: 0.7rem;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn button:hover{
+            transform: scale(1.05);
+            background: linear-gradient(135deg, blue, purple);
+            color: #fff;
+            box-shadow: 0 0 15px blue;
+            border-color: blue;
+        }
+        .btn2 button{
+            margin-bottom: 1rem;
+            width: 95%;
+            background: transparent;
+            border-radius: 10px;
+            border: solid 1px;
+            padding: 0.7rem;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn2 button:hover{
+            transform: scale(1.05);
+            background: linear-gradient(135deg, blue, purple);
+            color: #fff;
+            box-shadow: 0 0 15px blue;
+            border-color: blue;
+        }
+
+        /* ---------- MEDIA QUERIES---------- */
+        @media (max-width: 600px) and (orientation: landscape){
+            body{
+              padding-top: 1rem; 
+              display: flex-start;       
+            }
+            .login-box{
+                margin-top: 0.6rem;
+            }
+        }
+        
+    </style> 
+ </head> 
+ <body> 
+
+    <!---------- LOGIN BOX ---------->
+  <div class="login-box"> 
+   <h1>Login Form</h1> 
+   <form> 
+
+    <!---------- INPUT FIELDS ---------->
+    <input type="text" placeholder="username" required> 
+    <input type="password" placeholder="password" required>
+    
+    <!---------- LOGIN BUTTON ---------->
+    <div class="btn"> <button type="submit">Login</button> 
+    </div> 
+   </form> 
+
+   <!---------- SIGNUP BUTTON ---------->
+   <div class="btn2"> <button id="signBTN" onclick="signUp()">Sign Up</button> 
+   </div>
+
+   <!---------- FORGOT PASSWORD LINK ---------->
+   <a href="passwordReset.html">Forgot Password?</a> 
+  </div> 
+  <script>
+
+    // Direct user to SignUp page function
+    function signUp(){
+        window.location.href = "SignUp.html";
+    }
+   </script> 
+ </body>
+</html>
