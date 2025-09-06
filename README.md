@@ -19,6 +19,7 @@ This template pack includes 3 responsive authenthication pages built with pure H
 5. Change fonts by editing the `font-family: ...` in the CSS.
 
 ## File Structure
+./Glassmophysm-Auth-Template
 |-- loginPage.html
 |-- SignUp.html
 |-- passwordReset.html
